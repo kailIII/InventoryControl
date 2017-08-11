@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="404.0" prefWidth="700.0" stylesheets="@../styles/main.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inventory.login.LoginController">
+    <children>
+        <ImageView fitHeight="428.0" fitWidth="539.0" layoutX="27.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="-24.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="161.0" AnchorPane.topAnchor="0.0">
+            <image>
+                <Image url="@../images/system/backgrounds/stockbox.jpg" />
+            </image>
+        </ImageView>
+        <VBox alignment="TOP_CENTER" layoutX="187.0" prefHeight="404.0" prefWidth="275.0" styleClass="back-black" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Label alignment="CENTER" prefHeight="47.0" prefWidth="287.0" text="Iniciar sesión">
+                    <font>
+                        <Font name="Freestyle Script" size="53.0" />
+                    </font>
+                    <textFill>
+                        <LinearGradient endX="1.0" endY="1.0" startX="1.0">
+                            <stops>
+                                <Stop color="#00000069" />
+                                <Stop color="BLACK" offset="1.0" />
+                            </stops>
+                        </LinearGradient>
+                    </textFill>
+                    <styleClass>
+                        <String fx:value="lato" />
+                        <String fx:value="h3" />
+                        <String fx:value="white" />
+                    </styleClass>
+                    <VBox.margin>
+                        <Insets bottom="35.0" top="45.0" />
+                    </VBox.margin>
+                </Label>
+                <TextField fx:id="userTF" prefHeight="38.0" prefWidth="214.0" promptText="Nombre de usuario" styleClass="dosis" text="vaksfk">
+                    <font>
+                        <Font name="MS Reference Sans Serif" size="13.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets bottom="15.0" left="20.0" right="20.0" />
+                    </VBox.margin>
+                </TextField>
+                <PasswordField fx:id="passwordPF" onKeyPressed="#fastAccess" prefHeight="38.0" prefWidth="164.0" promptText="Contraseña" styleClass="dosis" text="jaqart_">
+                    <font>
+                        <Font name="MS Reference Sans Serif" size="13.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets bottom="35.0" left="20.0" right="20.0" />
+                    </VBox.margin>
+                </PasswordField>
+                <Button fx:id="loginButton" mnemonicParsing="false" onAction="#login" prefHeight="38.0" prefWidth="109.0" text="Entrar" textAlignment="CENTER">
+                    <font>
+                        <Font name="Calibri Bold Italic" size="21.0" />
+                    </font>
+                    <textFill>
+                        <LinearGradient endX="1.0" endY="1.0" startX="1.0">
+                            <stops>
+                                <Stop color="#b5b5b5" />
+                                <Stop color="BLACK" offset="1.0" />
+                            </stops>
+                        </LinearGradient>
+                    </textFill>
+                    <styleClass>
+                        <String fx:value="dosis" />
+                        <String fx:value="button-red" />
+                    </styleClass>
+                </Button>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

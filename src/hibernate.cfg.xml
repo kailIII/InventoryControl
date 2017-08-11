@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+      
+    <property name="hibernate.hbm2ddl.auto">update</property>
+    
+    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/kaizenso_inventory</property>
+    <property name="hibernate.connection.username">vaksfk</property>
+    <property name="hibernate.connection.password">jaqart_</property>
+    
+    <property name="show_sql">true</property>
+    <property name="format_sql">true</property>
+    <!--<property name="use_sql_comments">true</property>-->
+    
+    <mapping class="inventory.model.User"/>
+    <mapping class="inventory.model.UserStore"/>
+    <mapping class="inventory.model.UserStoreId"/>
+    
+    <mapping class="inventory.model.Store"/>
+    <mapping class="inventory.model.Product"/>
+    <mapping class="inventory.model.StoreProduct"/>
+    <mapping class="inventory.model.StoreProductId"/>
+    
+    <mapping class="inventory.model.Category"/>
+    <mapping class="inventory.model.Supplier"/>
+    <mapping class="inventory.model.Measurement"/>
+    
+    <mapping class="inventory.model.Adjustment"/>
+    <mapping class="inventory.model.AdjustmentItem"/>
+    
+    <mapping class="inventory.model.Department"/>
+    <mapping class="inventory.model.Employee"/>
+    <mapping class="inventory.model.Transfer"/>
+    
+  </session-factory>
+</hibernate-configuration>

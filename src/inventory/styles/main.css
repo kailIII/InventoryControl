@@ -1,0 +1,76 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Apr 10, 2017, 2:20:31 PM
+    Author     : ea_23
+*/
+/* Carga de fuentes principales para el sistema  */
+@font-face {
+    font-family: Lato;
+    src: url('../fonts/Lato/Lato-Regular.ttf');
+}
+
+@font-face {
+    font-family: Dosis;
+    src: url('../fonts/Dosis/Dosis-Regular.ttf');
+}
+
+.lato{
+    -fx-font-family : Lato, 'Arial';
+}
+
+.dosis{
+    -fx-font-family : Dosis, 'Arial';
+}
+
+.h1{ -fx-font-size : 30px; }
+.h2{ -fx-font-size : 25px; }
+.h3{ -fx-font-size : 20px; }
+.h4{ -fx-font-size : 15px; }
+.h5{ -fx-font-size : 10px; }
+.white{ -fx-text-fill: white; }
+.black{ -fx-text-fill: black; }
+
+.hiddenBtn{
+    -fx-background-color: transparent;
+}
+
+.panemenu{
+    -fx-background-color: white !important;
+}
+
+.textLink{
+    -fx-text-fill: black;
+}
+
+.images-content{
+    -fx-background-size: 30px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 90%;
+}
+
+.button-red{
+    -fx-background-color: #E66061;
+    -fx-text-fill: white;
+    -fx-font-size : 15px;
+    -fx-font-family: Lato;
+}
+
+.button-red:hover{
+    -fx-background-color: #E66067;
+    -fx-font-family: Lato;
+}
+
+.button-red:pressed{
+    -fx-background-color: #E66077;
+    -fx-font-family: Lato;
+}
+
+.back-red   { -fx-background-color: #E66061; }
+.back-black { -fx-background-color: #565656; }
+.back-gray  { -fx-background-color: #DFE0E2; }
+.back-white { -fx-background-color: #FFFFFF; }
+.back-blue  { -fx-background-color: #8AAAB2; }

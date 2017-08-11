@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.validation.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.cell.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="568.0" prefWidth="613.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inventory.crud.stock.dialog.adjust.selection.AdjustSelectionController">
+    <children>
+        <TableView fx:id="producstTV" layoutX="14.0" layoutY="29.0" prefHeight="509.0" prefWidth="232.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+            <columns>
+                <TableColumn prefWidth="119.0" text="Nombre">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="name" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="112.0" text="Categoria">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="category" />
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+        <JFXButton layoutX="432.0" layoutY="443.0" onAction="#saveAdjust" prefHeight="41.0" prefWidth="193.0" style="-fx-background-color: #7197A3;" text="Finalizar" textFill="#ffffffea" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="30.0">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </JFXButton>
+        <VBox layoutX="269.0" layoutY="39.0" prefHeight="415.0" prefWidth="276.0" spacing="40.0" AnchorPane.leftAnchor="269.0" AnchorPane.topAnchor="65.0">
+            <children>
+                <JFXTextField fx:id="productNameTF" editable="false" focusColor="#86b4c2" labelFloat="true" prefHeight="40.0" prefWidth="236.0" promptText="Nombre del producto" />
+                <JFXTextField fx:id="newQuantityTF" focusColor="#86b4c2" labelFloat="true" prefHeight="40.0" prefWidth="171.0" promptText="Cantidad nueva" />
+                <JFXTextField fx:id="oldQuantityTF" editable="false" focusColor="#86b4c2" labelFloat="true" prefHeight="40.0" prefWidth="171.0" promptText="Cantidad anterior" />
+                <JFXTextField fx:id="differenceQuantityTF" editable="false" focusColor="#86b4c2" labelFloat="true" prefHeight="40.0" prefWidth="157.0" promptText="Diferencia" />
+                <JFXComboBox fx:id="storesCB" disable="true" prefHeight="40.0" prefWidth="277.0" promptText="Tienda" />
+            </children>
+        </VBox>
+        <Label layoutX="269.0" layoutY="13.0" prefHeight="25.0" prefWidth="223.0" text="Ajuste de inventario" textFill="#0000006d">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

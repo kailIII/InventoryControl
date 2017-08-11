@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="346.0" prefWidth="287.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inventory.crud.user.dialog.StoreViewDialogController">
+   <children>
+      <Label alignment="CENTER" layoutX="64.0" layoutY="35.0" text="Tiendas:" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <ListView fx:id="storesLV" layoutX="64.0" layoutY="67.0" prefHeight="162.0" prefWidth="242.0" AnchorPane.bottomAnchor="45.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="45.0" />
+      <Button layoutX="152.0" layoutY="271.0" mnemonicParsing="false" onAction="#close" prefHeight="25.0" prefWidth="106.0" text="Cerrar" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="20.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="dashBoardPane" minHeight="650.0" minWidth="800.0" prefHeight="800.0" prefWidth="1250.0" stylesheets="@../styles/dashboard.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inventory.dashboard.DashboardController">
+    <children>
+        <MenuBar layoutX="168.0" layoutY="56.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <menus>
+                <Menu mnemonicParsing="false" text="Archivo">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Close" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Herramientas">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Delete" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Ayuda">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="About" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <AnchorPane layoutX="40.0" layoutY="125.0" prefHeight="448.0" prefWidth="117.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="25.0" />
+        <ToolBar layoutX="195.0" layoutY="155.0" orientation="VERTICAL" prefHeight="764.0" prefWidth="135.0" styleClass="panemenu" stylesheets="@../styles/main.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="25.0">
+            <items>
+            <VBox fx:id="menuContainer" prefHeight="116.0" prefWidth="84.0" spacing="2.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#openHome" prefHeight="131.0" prefWidth="161.0" styleClass="hiddenBtn">
+                     <tooltip>
+                        <Tooltip opacity="0.85" text="Permite gestionar productos" wrapText="true">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Tooltip>
+                     </tooltip>
+                     <graphic>
+                        <ImageView fitHeight="70.0" fitWidth="70.0" layoutX="100.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true" x="100.0" y="100.0">
+                           <viewport>
+                              <Rectangle2D minX="1000.0" minY="1000.0" />
+                           </viewport>
+                           <image>
+                              <Image url="@../images/system/menu/house.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <AnchorPane prefHeight="29.0" prefWidth="125.0">
+                     <children>
+                        <Hyperlink alignment="CENTER" layoutX="24.0" layoutY="-1.0" onAction="#openHome" styleClass="textLink" text="Inicio" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Hyperlink>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+                <VBox prefHeight="116.0" prefWidth="84.0" spacing="2.0">
+                    <children>
+                        <Button mnemonicParsing="false" onAction="#openProducts" prefHeight="131.0" prefWidth="161.0" styleClass="hiddenBtn">
+                            <graphic>
+                                <ImageView fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../images/system/menu/notepad.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                            <tooltip>
+                                <Tooltip opacity="0.85" text="Permite gestionar productos" wrapText="true">
+                                    <font>
+                                        <Font size="20.0" />
+                                    </font>
+                                </Tooltip>
+                            </tooltip>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </Button>
+                        <AnchorPane prefHeight="29.0" prefWidth="125.0">
+                            <children>
+                                <Hyperlink alignment="CENTER" layoutX="24.0" layoutY="-1.0" onAction="#openProducts" styleClass="textLink" text="Productos" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font></Hyperlink>
+                            </children>
+                        </AnchorPane>
+                    </children>
+                </VBox>
+                <VBox prefHeight="116.0" prefWidth="84.0" spacing="2.0">
+                    <children>
+                        <Button mnemonicParsing="false" onAction="#openInventory" prefHeight="131.0" prefWidth="161.0" styleClass="hiddenBtn">
+                            <graphic>
+                                <ImageView fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../images/system/menu/list.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                            <tooltip>
+                                <Tooltip opacity="0.85" text="Permite gestionar los productos en inventario" wrapText="true">
+                                    <font>
+                                        <Font size="20.0" />
+                                    </font>
+                                </Tooltip>
+                            </tooltip>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </Button>
+                        <AnchorPane prefHeight="29.0" prefWidth="125.0">
+                            <children>
+                                <Hyperlink alignment="CENTER" onAction="#openInventory" styleClass="textLink" text="Inventario" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font></Hyperlink>
+                            </children>
+                        </AnchorPane>
+                    </children>
+                </VBox>
+                <VBox prefHeight="116.0" prefWidth="84.0" spacing="2.0">
+                    <children>
+                        <Button mnemonicParsing="false" onAction="#openUsers" prefHeight="131.0" prefWidth="161.0" styleClass="hiddenBtn">
+                            <graphic>
+                                <ImageView fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../images/system/menu/team.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                            <tooltip>
+                                <Tooltip opacity="0.85" text="Permite gestionar usuarios en el sistema" wrapText="true">
+                                    <font>
+                                        <Font size="20.0" />
+                                    </font>
+                                </Tooltip>
+                            </tooltip>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </Button>
+                        <AnchorPane prefHeight="29.0" prefWidth="125.0">
+                            <children>
+                                <Hyperlink alignment="CENTER" onAction="#openUsers" styleClass="textLink" text="Usuarios" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font></Hyperlink>
+                            </children>
+                        </AnchorPane>
+                    </children>
+                </VBox>
+                <VBox prefHeight="116.0" prefWidth="84.0" spacing="2.0">
+                    <children>
+                        <Button mnemonicParsing="false" prefHeight="131.0" prefWidth="161.0" styleClass="hiddenBtn">
+                            <graphic>
+                                <ImageView fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../images/system/menu/transfer.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                            <tooltip>
+                                <Tooltip opacity="0.85" text="Permite gestionar transferencias" wrapText="true">
+                                    <font>
+                                        <Font size="20.0" />
+                                    </font>
+                                </Tooltip>
+                            </tooltip>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </Button>
+                        <AnchorPane prefHeight="29.0" prefWidth="125.0">
+                            <children>
+                                <Hyperlink alignment="CENTER" styleClass="textLink" text="Transferencias" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font></Hyperlink>
+                            </children>
+                        </AnchorPane>
+                    </children>
+                </VBox>
+            <VBox prefHeight="116.0" prefWidth="84.0" spacing="2.0">
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="131.0" prefWidth="161.0" styleClass="hiddenBtn">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <ImageView fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/system/menu/warning.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <tooltip>
+                        <Tooltip opacity="0.85" text="Permite gestionar transferencias" wrapText="true">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Tooltip>
+                     </tooltip>
+                  </Button>
+                  <AnchorPane prefHeight="29.0" prefWidth="125.0">
+                     <children>
+                        <Hyperlink alignment="CENTER" styleClass="textLink" text="Inconsistencias" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Hyperlink>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+            </items>
+        </ToolBar>
+        <AnchorPane fx:id="viewerAP" layoutX="141.0" layoutY="25.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="141.0" AnchorPane.rightAnchor="-6.0" AnchorPane.topAnchor="25.0" />
+    </children>
+</AnchorPane>

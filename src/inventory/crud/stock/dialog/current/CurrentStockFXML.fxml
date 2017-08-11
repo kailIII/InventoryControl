@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.cell.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="598.0" prefWidth="939.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inventory.crud.stock.dialog.current.CurrentStockController">
+    <children>
+        <AnchorPane layoutX="10.0" layoutY="10.0" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <VBox layoutX="-136.0" layoutY="68.0" prefHeight="49.0" prefWidth="1032.0" spacing="5.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                    <children>
+                        <Label text="Búsqueda:" textFill="#00244fcc">
+                            <font>
+                                <Font name="System Bold" size="16.0" />
+                            </font>
+                        </Label>
+                        <HBox alignment="CENTER_LEFT" prefHeight="22.0" prefWidth="1032.0" spacing="10.0">
+                            <children>
+                                <ComboBox prefHeight="25.0" prefWidth="431.0" promptText="Producto" />
+                                <TextField prefHeight="25.0" prefWidth="902.0" />
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+                <Separator layoutX="98.0" layoutY="184.0" prefWidth="200.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="140.0" />
+                <Button layoutX="969.0" layoutY="121.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="145.0" text="Actualizar" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="75.0" />
+                <Label alignment="CENTER" layoutX="43.0" layoutY="74.0" prefHeight="47.0" prefWidth="585.0" text="Inventario actual" textFill="#757575" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="80.0">
+                    <font>
+                        <Font size="37.0" />
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+        <TableView fx:id="storeProductsTV" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="150.0">
+            <columns>
+                <TableColumn fx:id="nameTC" prefWidth="109.0" text="Producto">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="pk" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="descriptionTC" prefWidth="237.0" text="Descripción">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="pk" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="categoryTC" prefWidth="142.0" text="Categoría">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="pk" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="supplierTC" prefWidth="146.0" text="Vendedor">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="pk" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="quantityTC" prefWidth="146.0" text="Cantidad">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="pk" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="detailsTC" prefWidth="138.0" text="Detalles de producto" />
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>

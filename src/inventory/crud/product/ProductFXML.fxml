@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.cell.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="755.0" prefWidth="1403.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inventory.crud.product.ProductController">
+    <children>
+        <SplitPane dividerPositions="0.5590778097982709" layoutX="119.0" layoutY="24.0" prefHeight="160.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                    <children>
+                        <ScrollPane fitToHeight="true" fitToWidth="true" layoutX="104.0" layoutY="103.0" pannable="true" prefHeight="558.0" prefWidth="672.0" AnchorPane.bottomAnchor="90.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="80.0">
+                            <content>
+                                <TableView fx:id="productsTV" prefWidth="1200.0" tableMenuButtonVisible="true">
+                                    <columns>
+                                        <TableColumn prefWidth="74.0" text="ID">
+                                            <cellValueFactory>
+                                                <PropertyValueFactory property="id" />
+                                            </cellValueFactory>
+                                        </TableColumn>
+                                        <TableColumn fx:id="codeTC" minWidth="0.0" prefWidth="138.0" text="Código">
+<!--                                            <cellValueFactory>
+                                                <PropertyValueFactory property="code" />
+                                            </cellValueFactory>-->
+                                        </TableColumn>
+                                        <TableColumn minWidth="0.0" prefWidth="194.0" text="Nombre">
+                                            <cellValueFactory>
+                                                <PropertyValueFactory property="name" />
+                                            </cellValueFactory>
+                                        </TableColumn>
+                                        <TableColumn minWidth="0.0" prefWidth="193.0" text="Descripción">
+                                            <cellValueFactory>
+                                                <PropertyValueFactory property="description" />
+                                            </cellValueFactory>
+                                        </TableColumn>
+                                        <TableColumn minWidth="0.0" prefWidth="122.0" text="Precio">
+                                            <cellValueFactory>
+                                                <PropertyValueFactory property="unitPrice" />
+                                            </cellValueFactory>
+                                        </TableColumn>
+                                        <TableColumn minWidth="0.0" prefWidth="90.0" text="Marca">
+                                            <cellValueFactory>
+                                                <PropertyValueFactory property="brand" />
+                                            </cellValueFactory>
+                                        </TableColumn>
+                                        <TableColumn prefWidth="123.0" text="Categoría">
+                                            <cellValueFactory>
+                                                <PropertyValueFactory property="category" />
+                                            </cellValueFactory>
+                                        </TableColumn>
+                                        <TableColumn prefWidth="143.0" text="Proveedor">
+                                            <cellValueFactory>
+                                                <PropertyValueFactory property="supplier" />
+                                            </cellValueFactory>
+                                        </TableColumn>
+                                    </columns>
+                                    <contextMenu>
+                                        <ContextMenu>
+                                            <items>
+                                                <MenuItem mnemonicParsing="false" onAction="#context" text="Crear" />
+                                                <MenuItem mnemonicParsing="false" onAction="#context" text="Editar" />
+                                                <MenuItem mnemonicParsing="false" onAction="#context" text="Eliminar" />
+                                            </items>
+                                        </ContextMenu>
+                                    </contextMenu>
+                                </TableView>
+                            </content>
+                        </ScrollPane>
+                        <Label alignment="CENTER" layoutX="177.0" layoutY="10.0" text="Tabla de productos" textFill="#0000009f" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0">
+                            <font>
+                                <Font name="System Bold" size="24.0" />
+                            </font>
+                        </Label>
+                        <ToolBar layoutX="20.0" layoutY="644.0" prefHeight="70.0" prefWidth="672.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+                            <items>
+                                <Button mnemonicParsing="false" onAction="#context" prefHeight="52.0" prefWidth="114.0" text="Crear">
+                                    <graphic>
+                                        <ImageView fitHeight="34.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../../images/crud/add-icon.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                    <font>
+                                        <Font size="19.0" />
+                                    </font>
+                                </Button>
+                                <Button mnemonicParsing="false" onAction="#context" prefHeight="52.0" prefWidth="119.0" text="Editar">
+                                    <graphic>
+                                        <ImageView fitHeight="34.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../../images/crud/edit-icon.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                    <font>
+                                        <Font size="19.0" />
+                                    </font>
+                                </Button>
+                                <Button mnemonicParsing="false" onAction="#context" prefHeight="52.0" prefWidth="131.0" text="Eliminar">
+                                    <font>
+                                        <Font size="19.0" />
+                                    </font>
+                                    <graphic>
+                                        <ImageView fitHeight="34.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../../images/crud/delete-icon.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                </Button>
+                                <Button mnemonicParsing="false" onAction="#context" prefHeight="52.0" prefWidth="154.0" text="Cancelar">
+                                    <font>
+                                        <Font size="19.0" />
+                                    </font>
+                                    <graphic>
+                                        <ImageView fitHeight="34.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../../images/crud/cancel-icon.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                </Button>
+                                <Button mnemonicParsing="false" onAction="#context" prefHeight="52.0" prefWidth="154.0" text="Salir">
+                                    <font>
+                                        <Font size="19.0" />
+                                    </font>
+                                    <graphic>
+                                        <ImageView fitHeight="34.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../../images/crud/exit-icon.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                </Button>
+                            </items>
+                        </ToolBar>
+                        <HBox layoutX="14.0" layoutY="45.0" prefHeight="25.0" prefWidth="740.0" spacing="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="45.0">
+                            <children>
+                                <TextField prefHeight="25.0" prefWidth="555.0" promptText="Buscar usuario..." />
+                                <ComboBox prefHeight="25.0" prefWidth="208.0" promptText="Buscar por" />
+                            </children>
+                        </HBox>
+                    </children>
+                </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                    <children>
+                        <Label alignment="CENTER" layoutY="44.0" text="Manejador de productos" textFill="#0000009f" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0">
+                            <font>
+                                <Font name="System Bold" size="24.0" />
+                            </font>
+                        </Label>
+                        <TabPane fx:id="accordion" layoutX="31.0" layoutY="52.0" prefHeight="391.0" prefWidth="344.0" style="-fx-padding: 1; -fx-background-color: grey, -fx-control-inner-background; -fx-background-insets: 0, 1;" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="60.0">
+                            <tabs>
+                                <Tab fx:id="createTab" text="Crear un producto nuevo">
+                                    <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                            <children>
+                                                <Label alignment="TOP_LEFT" layoutX="14.0" layoutY="21.0" prefHeight="25.0" prefWidth="148.0" text="Datos del producto:" textFill="#0000009f" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="20.0">
+                                                    <font>
+                                                        <Font name="System Bold Italic" size="16.0" />
+                                                    </font>
+                                                </Label>
+                                                <ScrollPane fx:id="scrollPane" fitToWidth="true" layoutY="55.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="50.0">
+                                                    <content>
+                                                        <VBox prefHeight="533.0" prefWidth="513.0" spacing="15.0">
+                                                            <children>
+                                                                <VBox prefHeight="42.0" prefWidth="171.0">
+                                                                    <children>
+                                                                        <Label text="Nombre del producto:" />
+                                                                        <TextField fx:id="nameTF" promptText="Introducir el nombre del producto" />
+                                                                    </children>
+                                                                </VBox>
+                                                                <VBox prefHeight="42.0" prefWidth="171.0">
+                                                                    <children>
+                                                                        <Label text="Descripción:" />
+                                                                        <TextField fx:id="descriptionTF" promptText="Introducir breve descripción del producto" />
+                                                                    </children>
+                                                                </VBox>
+                                                                <VBox prefHeight="42.0" prefWidth="171.0">
+                                                                    <children>
+                                                                        <Label text="Precio:" />
+                                                                        <TextField fx:id="priceTF" promptText="Introducir el precio del producto" />
+                                                                    </children>
+                                                                </VBox>
+                                                                <VBox prefHeight="42.0" prefWidth="171.0">
+                                                                    <children>
+                                                                        <Label text="Marca:" />
+                                                                        <TextField fx:id="brandTF" promptText="Introducir la marca del producto" />
+                                                                    </children>
+                                                                </VBox>
+                                                                <VBox prefHeight="50.0" prefWidth="513.0">
+                                                                    <children>
+                                                                        <Label text="Categoría:" />
+                                                                        <ComboBox fx:id="categoryCB" prefHeight="25.0" prefWidth="259.0" promptText="Elegir categoría del producto" />
+                                                                    </children>
+                                                                </VBox>
+                                                                <VBox prefHeight="50.0" prefWidth="513.0">
+                                                                    <children>
+                                                                        <Label text="Proveedor" />
+                                                                        <ComboBox fx:id="supplierCB" prefHeight="25.0" prefWidth="269.0" promptText="Elegir proveedor del producto" />
+                                                                    </children>
+                                                                </VBox>
+                                                                <VBox prefHeight="42.0" prefWidth="171.0">
+                                                                    <children>
+                                                                        <Button alignment="CENTER" mnemonicParsing="false" onAction="#save" prefHeight="25.0" prefWidth="779.0" text="Finalizar" />
+                                                                    </children>
+                                                                </VBox>
+                                                            </children>
+                                                        </VBox>
+                                                    </content>
+                                                    <padding>
+                                                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                    </padding>
+                                                </ScrollPane>
+                                            </children>
+                                        </AnchorPane>
+                                    </content>
+                                </Tab>
+                                <Tab fx:id="editTab" text="Editar un producto existente">
+                                    <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                            <children>
+                                                <Label alignment="TOP_LEFT" layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="259.0" text="Nuevos datos del producto:" textFill="#0000009f" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="20.0">
+                                                    <font>
+                                                        <Font name="System Bold Italic" size="16.0" />
+                                                    </font>
+                                                </Label>
+                                                <ScrollPane fx:id="scrollPane1" fitToWidth="true" layoutX="59.0" layoutY="26.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="50.0">
+                                                    <content>
+                                                        <VBox prefHeight="529.0" prefWidth="513.0" spacing="15.0">
+                                                            <children>
+                                                                <VBox prefHeight="42.0" prefWidth="171.0">
+                                                                    <children>
+                                                                        <Label text="Nombre del producto:" />
+                                                                        <TextField fx:id="editNameTF" promptText="Introducir el nombre del producto" />
+                                                                    </children>
+                                                                </VBox>
+                                                                <VBox prefHeight="42.0" prefWidth="171.0">
+                                                                    <children>
+                                                                        <Label text="Descripción:" />
+                                                                        <TextField fx:id="editDescriptionTF" promptText="Introducir breve descripción del producto" />
+                                                                    </children>
+                                                                </VBox>
+                                                                <VBox prefHeight="42.0" prefWidth="171.0">
+                                                                    <children>
+                                                                        <Label text="Precio:" />
+                                                                        <TextField fx:id="editPriceTF" promptText="Introducir el precio del producto" />
+                                                                    </children>
+                                                                </VBox>
+                                                                <VBox prefHeight="42.0" prefWidth="171.0">
+                                                                    <children>
+                                                                        <Label text="Marca:" />
+                                                                        <TextField fx:id="editBrandTF" promptText="Introducir la marca del producto" />
+                                                                    </children>
+                                                                </VBox>
+                                                                <VBox prefHeight="50.0" prefWidth="513.0">
+                                                                    <children>
+                                                                        <Label text="Categoría:" />
+                                                                        <ComboBox fx:id="editCategoryCB" prefHeight="25.0" prefWidth="259.0" promptText="Elegir categoría del producto" />
+                                                                    </children>
+                                                                </VBox>
+                                                                <VBox prefHeight="50.0" prefWidth="513.0">
+                                                                    <children>
+                                                                        <Label text="Proveedor" />
+                                                                        <ComboBox fx:id="editSupplierCB" prefHeight="25.0" prefWidth="269.0" promptText="Elegir proveedor del producto" />
+                                                                    </children>
+                                                                </VBox>
+                                                                <VBox prefHeight="42.0" prefWidth="171.0">
+                                                                    <children>
+                                                                        <Button alignment="CENTER" mnemonicParsing="false" onAction="#update" prefHeight="25.0" prefWidth="779.0" text="Finalizar" />
+                                                                    </children>
+                                                                </VBox>
+                                                            </children>
+                                                        </VBox>
+                                                    </content>
+                                                    <padding>
+                                                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                    </padding>
+                                                </ScrollPane>
+                                            </children>
+                                        </AnchorPane>
+                                    </content>
+                                </Tab>
+                            </tabs>
+                            <opaqueInsets>
+                                <Insets />
+                            </opaqueInsets>
+                        </TabPane>
+                        <Button layoutX="492.0" layoutY="11.0" mnemonicParsing="false" onAction="#makeFloat" prefHeight="30.0" prefWidth="119.0" text="Hacer flotante" textFill="#656565" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="10.0">
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                        </Button>
+                    </children>
+                </AnchorPane>
+            </items>
+        </SplitPane>
+    </children>
+</AnchorPane>

@@ -1,0 +1,9 @@
+#Parametros de construcción
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+*.class
+build/built-jar.properties

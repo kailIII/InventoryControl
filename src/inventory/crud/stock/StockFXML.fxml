@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.geometry.*?>
+<?import com.jfoenix.controls.*?>
+<?import com.jfoenix.validation.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="308.0" prefWidth="490.0" style="-fx-background-color: WHITE;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inventory.crud.stock.StockController">
+   <children>
+      <JFXButton buttonType="RAISED" layoutX="30.0" layoutY="88.0" onAction="#openCurrentInventory" prefHeight="77.0" prefWidth="255.0" ripplerFill="WHITE" style="-fx-background-color: #0084C9;" text="Ver inventario actual" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="19.0" />
+         </font>
+      </JFXButton>
+      <HBox alignment="CENTER_LEFT" layoutX="185.0" layoutY="37.0" prefHeight="41.0" prefWidth="373.0" spacing="10.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="23.0" AnchorPane.topAnchor="30.0">
+         <children>
+            <Label prefHeight="21.0" prefWidth="132.0" text="Tienda actual:" textFill="#000000a0">
+               <font>
+                  <Font name="Tahoma Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="storeLabel" prefHeight="32.0" prefWidth="281.0" text="Tienda 1 - Localización 1">
+               <font>
+                  <Font size="22.0" />
+               </font>
+               <textFill>
+                  <RadialGradient centerX="0.20000000000000004" centerY="0.5761904761904761" focusAngle="-63.43" focusDistance="0.06976744186046502" radius="0.7790697674418605">
+                     <stops>
+                        <Stop color="BLACK" />
+                        <Stop color="#6f6f6f" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </textFill>
+            </Label>
+         </children>
+      </HBox>
+      <JFXButton buttonType="RAISED" layoutX="193.0" layoutY="203.0" onAction="#openAdjustInventory" prefHeight="77.0" prefWidth="308.0" ripplerFill="WHITE" style="-fx-background-color: #19B509;" text="Realizar ajustes de inventario" textFill="WHITE" AnchorPane.bottomAnchor="25.0" AnchorPane.rightAnchor="40.0">
+         <font>
+            <Font name="System Bold Italic" size="19.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

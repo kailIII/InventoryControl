@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="359.0" prefWidth="490.0" style="-fx-background-color: WHITE;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inventory.crud.product.barcode.ProductBarcodeController">
+   <children>
+      <JFXButton buttonType="RAISED" layoutX="278.0" layoutY="239.0" prefHeight="45.0" prefWidth="185.0" ripplerFill="WHITE" style="-fx-background-color: #0084C9;" text="Exportar" textFill="WHITE" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0">
+         <font>
+            <Font name="System Bold Italic" size="16.0" />
+         </font>
+      </JFXButton>
+      <Label fx:id="storeLabel" alignment="CENTER" layoutY="20.0" prefHeight="32.0" prefWidth="281.0" text="Código de barras" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="20.0">
+         <font>
+            <Font size="30.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="0.20000000000000004" centerY="0.5761904761904761" focusAngle="-63.43" focusDistance="0.06976744186046502" radius="0.7790697674418605">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="#6f6f6f" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+      </Label>
+      <ImageView fx:id="barcodeIV" fitHeight="135.0" fitWidth="390.0" layoutX="76.0" layoutY="74.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="120.0" />
+      <Label fx:id="productLabel" alignment="CENTER" layoutY="60.0" prefHeight="32.0" prefWidth="281.0" text="Ejemplo de producto" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <font>
+            <Font name="System Italic" size="20.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="0.20000000000000004" centerY="0.5761904761904761" focusAngle="-63.43" focusDistance="0.06976744186046502" radius="0.7790697674418605">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="#6f6f6f" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+      </Label>
+   </children>
+</AnchorPane>
